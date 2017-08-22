@@ -1,20 +1,20 @@
 <!DOCTYPE html>
 <html>
-  <head>
+<head>
     <title>The New Boston</title>
     <link rel='stylesheet' href='/stylesheets/style.css' />
-  </head>
-  <body>
+</head>
+<body>
 
-      <% include templates/header.ejs %>
+    <% include templates/header.ejs %>
 
-    <p><%= name %></p>
+    <h3><%= videodata.categoryName %></h3>
 
     <ul>
-        <% for(var i = 0; i < 5; i++){ %>
-        <li>Tuna</li>
-        <% } %>
-    </ul>
+        <% videodata.categories.forEach(function(item){ %>
+            <li><%= item.categoryName %></li>
+        <% }); %>
+        </ul>
 
-  </body>
-</html>
+    </body>
+    </html>
